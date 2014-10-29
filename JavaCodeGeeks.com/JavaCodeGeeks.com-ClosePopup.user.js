@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name        JavaCodeGeeks.com-ClosePopup
-// @namespace   https://sites.google.com/site/rajuutils/greasemonkey_scripts/JavaCodeGeeks.com-ClosePopup
+// @namespace   https://github.com/VenkataRaju/GreaseMonkeyScripts/JavaCodeGeeks.com-ClosePopup
 // @description Closes Popup from JavaCodeGeeks.com
-// @downloadURL https://sites.google.com/site/rajuutils/greasemonkey_scripts/JavaCodeGeeks.com-ClosePopup.user.js
-// @updateURL   https://sites.google.com/site/rajuutils/greasemonkey_scripts/JavaCodeGeeks.com-ClosePopup.meta.js
+// @downloadURL https://github.com/VenkataRaju/GreaseMonkeyScripts/raw/master/JavaCodeGeeks.com/JavaCodeGeeks.com-ClosePopup.user.js
+// @updateURL   https://github.com/VenkataRaju/GreaseMonkeyScripts/raw/master/JavaCodeGeeks.com/JavaCodeGeeks.com-ClosePopup.meta.js
 // @match       http://javacodegeeks.com/*
 // @match       http://*.javacodegeeks.com/*
 // @match       http://webcodegeeks.com/*
 // @match       http://*.webcodegeeks.com/*
-// @version     4
+// @version     1
 // @grant       none
 // ==/UserScript==
 
