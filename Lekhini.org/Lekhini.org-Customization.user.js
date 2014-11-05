@@ -1,21 +1,25 @@
 // ==UserScript==
 // @name        Lekhini.org-Customization
 // @namespace   https://github.com/VenkataRaju/GreaseMonkeyScripts/raw/master/Lekhini.org/Lekhini.org-Customization
-// @description Reduces text area height and moves radio buttons to down
+// @description Reduces text area height and moves radio buttons to down. Selects telugu text on Tab key.
 // @downloadURL https://github.com/VenkataRaju/GreaseMonkeyScripts/raw/master/Lekhini.org/Lekhini.org-Customization.user.js
 // @updateURL   https://github.com/VenkataRaju/GreaseMonkeyScripts/raw/master/Lekhini.org/Lekhini.org-Customization.meta.js
 // @match       http://lekhini.org/
-// @version     1
+// @version     2
 // @grant       none
 // ==/UserScript==
+
+/** Version History
+   2  : Selects telugu text on Tab key.
+*/
 
 (function()
 {
   function $(id) document.getElementById(id);
-  $("txtInput").rows = 6;
-  $("txtOutput").rows = 6;
-  var outputArea = $("outputarea");
-  var txtOutput = $("txtOutput");
+  var txtInput = $("txtInput"), txtOutput = $("txtOutput"), outputArea = $("outputarea");
+  txtInput.rows = 6;
+  txtOutput.rows = 6;
   outputArea.insertBefore(txtOutput, outputArea.firstChild); 
   txtOutput.style.marginBottom = "10px";
+  txtOutput.addEventListener("focus", function() txtOutput.select());
 })();
