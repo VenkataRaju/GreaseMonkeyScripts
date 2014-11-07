@@ -1,21 +1,20 @@
 // ==UserScript==
 // @name        JavaCodeGeeks.com-ClosePopup
 // @namespace   https://github.com/VenkataRaju/GreaseMonkeyScripts/JavaCodeGeeks.com-ClosePopup
-// @description Closes Popup from JavaCodeGeeks.com
+// @description Closes Popup from JavaCodeGeeks.com and WebCodeGeeks.com
 // @downloadURL https://github.com/VenkataRaju/GreaseMonkeyScripts/raw/master/JavaCodeGeeks.com/JavaCodeGeeks.com-ClosePopup.user.js
 // @updateURL   https://github.com/VenkataRaju/GreaseMonkeyScripts/raw/master/JavaCodeGeeks.com/JavaCodeGeeks.com-ClosePopup.meta.js
 // @match       http://javacodegeeks.com/*
 // @match       http://*.javacodegeeks.com/*
 // @match       http://webcodegeeks.com/*
 // @match       http://*.webcodegeeks.com/*
-// @version     1.01
+// @version     1.02
 // @grant       none
 // ==/UserScript==
 
 
 /** Version History
-    1.01  : 1. Updated description (Added WebCodeGeeks.com)
-            2. Reduced delay time   
+    1.02  : 1. Actually (:)) updated description (Added WebCodeGeeks.com)
 */
 
 (function closePopup(attemptNum)
