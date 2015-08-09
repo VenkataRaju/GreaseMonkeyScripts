@@ -8,18 +8,28 @@
 // @match       http://*.javacodegeeks.com/*
 // @match       http://webcodegeeks.com/*
 // @match       http://*.webcodegeeks.com/*
-// @version     1.02
+// @version     1.03
 // @grant       none
 // ==/UserScript==
 
 
 /** Version History
+    1.03  : 1. Added support for new style popup
     1.02  : 1. Actually (:)) updated description (Added WebCodeGeeks.com)
 */
 
 (function closePopup(attemptNum)
 {
-  //FIX ME: This function is being called twice.
-  var el = document.querySelector("a.fancybox-close");
-  el ? el.click() : (attemptNum < 17) ? setTimeout(function() closePopup(attemptNum + 1), 600) : "dummy";
+    console.log("Attempting to detect popup #" + attemptNum);
+    var el = document.querySelector("a.fancybox-close, a.snp_nothanks");
+    if (el) {
+        el.click();
+        console.log("Dismissed popup");
+    } else if (attemptNum < 17) {
+        setTimeout(function() {
+            closePopup(attemptNum + 1);
+        }, 600);
+    } else {
+        console.log("Maximum attempts reached with no detected popup");
+    }
 })(0);
