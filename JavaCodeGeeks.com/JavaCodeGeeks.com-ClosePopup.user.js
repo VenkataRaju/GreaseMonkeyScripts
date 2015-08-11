@@ -8,18 +8,27 @@
 // @match       http://*.javacodegeeks.com/*
 // @match       http://webcodegeeks.com/*
 // @match       http://*.webcodegeeks.com/*
-// @version     1.02
+// @run-at      document-end
+// @noframes
+// @version     1.03
 // @grant       none
 // ==/UserScript==
 
 
 /** Version History
     1.02  : 1. Actually (:)) updated description (Added WebCodeGeeks.com)
+		1.03  : Updated for new popup
 */
 
 (function closePopup(attemptNum)
 {
-  //FIX ME: This function is being called twice.
-  var el = document.querySelector("a.fancybox-close");
-  el ? el.click() : (attemptNum < 17) ? setTimeout(function() closePopup(attemptNum + 1), 600) : "dummy";
+  var overlay = document.querySelector("div.fancybox-overlay");
+  var popupDiv = document.querySelector("div.fancybox-wrap");
+  if (overlay !== null && popupDiv !== null)
+  {
+    overlay.remove();
+    popupDiv.remove();
+  }
+  else if(attemptNum < 17)
+    setTimeout(function() closePopup(attemptNum + 1), 600);
 })(0);
